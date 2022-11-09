@@ -6,13 +6,12 @@ function App() {
 	const [text, setText] = useState("");
 	return (
 		<div className="App">
-			<Input
-				name="name"
-				render={({ value }) => {
+			<Input name="name">
+				{({ value }) => {
 					setText(value);
 					return <p>{value}</p>;
 				}}
-			/>
+			</Input>
 			<br />
 			<Input name="family" />
 			<p>text is :{text}</p>
